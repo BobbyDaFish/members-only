@@ -1,6 +1,7 @@
 <h1>Create New Post</h1>
+<% 'Signed in as: ' + post.member.displayname %>
 <%= form_with model: @post do |form| %>
   <%= label(:post, :content) %>
-  <%= form.text_area :username, value: "Write your post." %>
+  <%= form.text_area :content, value: "Write your post." %>
   <%= form.submit %>
 <% end %>
