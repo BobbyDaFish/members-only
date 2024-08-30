@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :members
+  devise_for :members, controllers: {
+    sessions: 'members/sessions',
+    registrations: 'members/registrations'
+  }
+
   root to: 'home#index'
   resources :posts, only: %i[new create index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

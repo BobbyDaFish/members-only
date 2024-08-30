@@ -12,7 +12,7 @@
   <% @posts.each do |post| %>
     <li>
       <% if member_signed_in? %>
-        <div><%= 'Posted by: ' + post.member.displayname %></div>
+        <div><%= 'Posted by: ' + post.member.email %></div>
         <br>
       <% end %>
       <p><%= post.content %></p>
